@@ -1,0 +1,137 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #ecf0f1;
+    font-family: 'Ubuntu', sans-serif;
+    min-width: 1000px;
+}
+
+.container {
+    width: 70%;
+    height: 100%;
+    max-width: 100%;
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+}
+
+h1.title {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 25px;
+}
+
+.streaming_screen_container iframe {
+    width: 80%;
+    height: 500px;
+    border: 1px solid #34495e;
+    margin: 5px 0 25px 0;
+    max-width: 900px;
+}
+
+.button_row:nth-child(2) button {
+    margin: 0 35px;
+}
+
+.buttons button {
+    width: 70px;
+    height: 40px;
+    border: none;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: #34495e;
+    color: #bdc3c7;
+}
+
+.buttons button:hover {
+    background-color: #2d3436;
+    color: #dfe6e9;
+}
+
+.speed_bar {
+    position: relative;
+    width: 80%;
+    height: 60px;
+    margin: auto;
+    border-top: 2px solid gray;
+}
+
+.speed_bar .color {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.speed_bar .color {
+    z-index: 1;
+    width: 0%;
+    height: 58px;
+    background-color: #74b9ff;
+    transition: 0.4s;
+}
+
+.speed_bar .ten {
+    z-index: 2;
+    width: 20%;
+    height: 20px;
+    position: relative;
+    border: 2px solid gray;
+    border-top: none;
+    border-bottom: none;
+    float: left;
+}
+
+.speed_bar .ten:nth-child(even) {
+    border-left: none;
+    border-right: none;
+}
+
+.ten .one {
+    width: 25%;
+    height: 10px;
+    float: left;
+    border: 2px solid gray;
+    border-bottom: none;
+    border-top: none;
+}
+
+.ten .one:nth-child(1){
+    border-left: none;
+    border-right: none
+}
+
+.ten .one:nth-child(2),
+.ten .one:nth-child(3){
+    border-right: none
+}
+
+.ten .one:nth-child(4){
+    border-right: none
+}
+
+h2.title {
+    margin-bottom: 10px;
+}
+
+.speed_bar .ten:after,
+.speed_bar .ten:before{
+    content: attr(data-num_1);
+    position: absolute;
+    bottom: 0;
+    transform: translate(-45%, 80%);
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.speed_bar .ten:before{
+    content: attr(data-num_2);
+    left : 0;
+}
