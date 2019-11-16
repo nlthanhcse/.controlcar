@@ -9,13 +9,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 	<script type="text/javascript" src="1.js"></script>
 	<script src="https://kit.fontawesome.com/327c3b17e6.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+	<script type="module" src="x-frame-bypass.js"></script>
 </head>
 <body>
 	<div class="container">
 		<h1 class="title">Control Car</h1>
 		<div class="streaming_screen_container">
 			<h2 class="title">Streaming Screen</h2>
-			<iframe src="https://www.youtube.com/?gl=VN" class="streaming_screen"></iframe>
+			<iframe is="x-frame-bypass" src="https://www.youtube.com/?gl=VN" class="streaming_screen"></iframe>
 		</div>
 		<div class="control_container">
 			<div class="control_buttons">

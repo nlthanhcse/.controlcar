@@ -84,7 +84,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	var iframe = document.getElementsByTagName('iframe')[0];
 	var url = iframe.src;
 	var getData = function (data) {
-		if (data && data.query && data.query.results && data.query.results.resources && data.query.results.resources.content && data.query.results.resources.status == 200) 
+		if (data && data.query && data.query.results && data.query.results.resources && 
+			data.query.results.resources.content && data.query.results.resources.status == 200) 
 			loadHTML(data.query.results.resources.content);
 		else if (data && data.error && data.error.description) loadHTML(data.error.description);
 		else loadHTML('Error: Cannot load ' + url);
@@ -92,7 +93,9 @@ window.addEventListener("DOMContentLoaded", function(){
 	var loadURL = function (src) {
 		url = src;
 		var script = document.createElement('script');
-		script.src = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20data.headers%20where%20url%3D%22' + encodeURIComponent(url) +'%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=getData';
+		script.src = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20data.headers%20where%20url%3D%22' 
+					encodeURIComponent(url) 
+					+'%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=getData';
 		document.body.appendChild(script);
 	};
 	var loadHTML = function (html) {
