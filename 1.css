@@ -20,6 +20,11 @@ html, body {
     margin: auto;
     padding-top: 10px;
     text-align: center;
+    max-height: 900px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }
 
 h1.title {
