@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	window.onkeydown = checkKey;
 	function checkKey(event, choice) {
 		console.log(event.keyCode);
-        switch (event.keyCode) {
+        /*switch (event.keyCode) {
            	case 37: //Left arrow key
               	break;
           	case 38: //Up arrow key
@@ -43,6 +43,21 @@ window.addEventListener("DOMContentLoaded", function(){
             	}
               	//               
               	break;
+        }*/
+
+        //Up arrow key
+        if (event.keyCode == 38) {
+        	if (speed < maxSpeed){
+           	 	 	speed += interval;
+           	  		changeSpeedBar(speed);
+            	}
+        }
+        //Down arrow key
+        if (event.keyCode == 40){
+        	if (speed > 0){
+           	 	 	speed -= interval;
+           	  		changeSpeedBar(speed);
+            	}
         }
     };
 	//

@@ -20,22 +20,17 @@ html, body {
     margin: auto;
     padding-top: 10px;
     text-align: center;
-    max-height: 900px;
-    transform: translate(-50%,-50%);
-    position: absolute;
-    left: 50%;
-    top: 50%;
 }
 
 h1.title {
     text-transform: uppercase;
     letter-spacing: 6px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .streaming_screen_container iframe {
     width: 80%;
-    height: 500px;
+    height: 400px;
     border: 1px solid #34495e;
     margin: 5px 0 25px 0;
     max-width: 900px;
